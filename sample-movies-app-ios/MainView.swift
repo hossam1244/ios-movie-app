@@ -7,19 +7,40 @@
 
 import SwiftUI
 struct MainView: View {
+    
+    
+    init() {
+        print("init!!")
+        UITabBar.appearance().backgroundColor = UIColor.white
+        
+    }
+    
+    
     var body: some View {
-        TabView {
-            HomeScreen()
-                .tabItem {
-                    Image(systemName: "popcorn.circle.fill")
-                    Text("Home")
-                }
-            Text("Favourites Movies")
-                .tabItem {
-                    Image(systemName: "star.fill")
-                    Text("Favourites")
-                }
+        
+        ZStack {
+            TabView {
+                HomeScreen()
+                    .tabItem {
+                        Image(systemName: "house.fill")
+                        Text("Home")
+                    }
+                Text("Favourites Movies")
+                    .tabItem {
+                        Image(systemName: "star.fill")
+                        Text("Favourites")
+                    }
+            }.accentColor(.yellow)
+            VStack {
+                Spacer()
+                Rectangle()
+                    .frame(maxWidth: .infinity, maxHeight: 1)
+                    .foregroundColor(.gray)
+                    .padding(.bottom, 60)
+            }
         }
+        
+        
     }
 }
 

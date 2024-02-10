@@ -12,7 +12,8 @@ struct HomeScreen: View {
     
     var body: some View {
         return VStack {
-              Text("home screen")
+            Text("Movies")
+            Spacer()
         }
     }
   
