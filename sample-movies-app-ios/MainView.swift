@@ -6,9 +6,24 @@
 //
 
 import SwiftUI
-
+import BottomBar_SwiftUI
 
 struct MainView: View {
+    
+    @State private var selectedIndex: Int = 0
+    
+    let items: [BottomBarItem] = [
+        BottomBarItem(icon: "house.fill", title: "Home", color: .purple),
+        BottomBarItem(icon: "magnifyingglass", title: "Search", color: .orange),
+        BottomBarItem(icon: "heart", title: "Favourites", color: .pink)
+    ]
+    
+    
+    
+    
+    var selectedItem: BottomBarItem {
+        items[selectedIndex]
+    }
     
     
     init() {
@@ -19,27 +34,21 @@ struct MainView: View {
     
     
     var body: some View {
-        ZStack {
-            TabView {
-                MoviesScreen()
-                    .tabItem {
-                        Image(systemName: "house.fill")
-                        Text("Home")
-                    }
-                Text("Favourites Movies")
-                    .tabItem {
-                        Image(systemName: "star.fill")
-                        Text("Favourites")
-                    }
-            }.accentColor(.yellow)
-            VStack {
-                Spacer()
-                Rectangle()
-                    .frame(maxWidth: .infinity, maxHeight: 1)
-                    .foregroundColor(.gray)
-                    .padding(.bottom, 60)
+        VStack {
+            NavigationView {
+                VStack {
+                    TabView(selection: $selectedIndex) {
+                                MoviesScreen()
+                                .tag(0)
+                                Text("Search")
+                                .tag(1)
+                                Text("Favourites")
+                                .tag(2)
+                            }
+                    BottomBar(selectedIndex: $selectedIndex, items: items)
+                }
             }
-        }
+        }.background(Color.white)
         
         
     }
