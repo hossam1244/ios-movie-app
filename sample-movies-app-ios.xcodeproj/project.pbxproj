@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F93ABF12B8107E1005A0741 /* MoviesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F93ABF02B8107E1005A0741 /* MoviesController.swift */; };
 		9FDC65AF2B6C036C0095101C /* sample_movies_app_iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDC65AE2B6C036C0095101C /* sample_movies_app_iosApp.swift */; };
 		9FDC65B12B6C036C0095101C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDC65B02B6C036C0095101C /* MainView.swift */; };
 		9FDC65B32B6C036E0095101C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FDC65B22B6C036E0095101C /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9F93ABF02B8107E1005A0741 /* MoviesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesController.swift; sourceTree = "<group>"; };
 		9FDC65AB2B6C036C0095101C /* sample-movies-app-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sample-movies-app-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FDC65AE2B6C036C0095101C /* sample_movies_app_iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sample_movies_app_iosApp.swift; sourceTree = "<group>"; };
 		9FDC65B02B6C036C0095101C /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 		9FEA867F2B78E98400622C74 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				9F93ABF02B8107E1005A0741 /* MoviesController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 			files = (
 				9FEA86812B78E9D900622C74 /* MovieModel.swift in Sources */,
 				9FDC65B12B6C036C0095101C /* MainView.swift in Sources */,
+				9F93ABF12B8107E1005A0741 /* MoviesController.swift in Sources */,
 				9FDC65AF2B6C036C0095101C /* sample_movies_app_iosApp.swift in Sources */,
 				9FEA86832B78EA2900622C74 /* MovieItemView.swift in Sources */,
 				9FEA867B2B77F8A500622C74 /* MoviesScreen.swift in Sources */,
