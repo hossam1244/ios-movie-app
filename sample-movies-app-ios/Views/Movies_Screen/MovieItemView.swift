@@ -17,13 +17,13 @@ struct MovieItemView : View {
             RoundedRectangle(cornerRadius: 25, style: .continuous)
                        .fill(.white)
                 
-            AsyncImage(url: URL(string: movieModel.image))
+            AsyncImage(url: URL(string: movieModel.Poster))
                 .scaledToFill()
                 .edgesIgnoringSafeArea(.all)
 
                    VStack {
                        Spacer()
-                       Text(movieModel.title)
+                       Text(movieModel.Title)
                            .font(.largeTitle)
                            .foregroundColor(.white)
                    }

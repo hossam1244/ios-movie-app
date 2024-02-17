@@ -8,8 +8,7 @@
 import Foundation
 
 
-struct MovieModel : Identifiable {
-    let id = UUID()
-    let title: String
-    let image: String
+struct MovieModel : Codable {
+    let Title: String
+    let Poster: String
 }

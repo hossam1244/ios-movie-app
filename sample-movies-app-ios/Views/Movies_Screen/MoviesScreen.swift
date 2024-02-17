@@ -10,15 +10,35 @@ import SwiftUI
 
 struct MoviesScreen: View {
     
+    @State var results = [MovieModel]()
+
+//    
+//    let moviesList = [
+//        MovieModel(title: "NightCrawel", poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEJ18zuCQbgxLy5uqE3qwfJuBDMQQSS77ZMg&usqp=CAU"),
+//        MovieModel(title: "The GodFather", poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEJ18zuCQbgxLy5uqE3qwfJuBDMQQSS77ZMg&usqp=CAU")
+//       
+//    ]
     
-    let moviesList = [
-        MovieModel(title: "NightCrawel", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEJ18zuCQbgxLy5uqE3qwfJuBDMQQSS77ZMg&usqp=CAU"),
-        MovieModel(title: "The GodFather", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEJ18zuCQbgxLy5uqE3qwfJuBDMQQSS77ZMg&usqp=CAU")
-       
-    ]
+    func fetchMovies() {
+        
+    }
     
     var body: some View {
-        List(moviesList) {movie in MovieItemView(movieModel: movie)}.padding(0)
+        VStack{
+            VStack{
+                ForEach(results, id: \.Title) { result in
+                    MovieItemView(movieModel: result)
+                }
+            }
+            
+        }.onAppear() {
+            MoviesController().getMovies { (results) in
+                self.results = results
+                print("Check point")
+            }
+        }
+        
+//        List(moviesList) {movie in MovieItemView(movieModel: movie)}.padding(0)
     }
   
 }
