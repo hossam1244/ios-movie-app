@@ -31,11 +31,13 @@ struct MoviesScreen: View {
                 }
             }
             
-        }.onAppear() {
-            MoviesController().getMovies { (results) in
-                self.results = results
-                print("Check point")
+        }.onAppear()  {
+            Task {
+                await MoviesController().getMovies { (results) in
+                    self.results = results ?? []
+                }
             }
+           
         }
         
 //        List(moviesList) {movie in MovieItemView(movieModel: movie)}.padding(0)

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9F93ABF12B8107E1005A0741 /* MoviesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F93ABF02B8107E1005A0741 /* MoviesController.swift */; };
+		9FC04BC22B823EBD00F9E489 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 9FC04BC12B823EBD00F9E489 /* Alamofire */; };
+		9FC04BC52B82401A00F9E489 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 9FC04BC42B82401A00F9E489 /* SwiftyJSON */; };
 		9FDC65AF2B6C036C0095101C /* sample_movies_app_iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDC65AE2B6C036C0095101C /* sample_movies_app_iosApp.swift */; };
 		9FDC65B12B6C036C0095101C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDC65B02B6C036C0095101C /* MainView.swift */; };
 		9FDC65B32B6C036E0095101C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FDC65B22B6C036E0095101C /* Assets.xcassets */; };
@@ -60,7 +62,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FC04BC52B82401A00F9E489 /* SwiftyJSON in Frameworks */,
 				9FEA86862B790ADA00622C74 /* BottomBar-SwiftUI in Frameworks */,
+				9FC04BC22B823EBD00F9E489 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,6 +195,8 @@
 			name = "sample-movies-app-ios";
 			packageProductDependencies = (
 				9FEA86852B790ADA00622C74 /* BottomBar-SwiftUI */,
+				9FC04BC12B823EBD00F9E489 /* Alamofire */,
+				9FC04BC42B82401A00F9E489 /* SwiftyJSON */,
 			);
 			productName = "sample-movies-app-ios";
 			productReference = 9FDC65AB2B6C036C0095101C /* sample-movies-app-ios.app */;
@@ -266,6 +272,8 @@
 			mainGroup = 9FDC65A22B6C036C0095101C;
 			packageReferences = (
 				9FEA86842B790ADA00622C74 /* XCRemoteSwiftPackageReference "bottombar-swiftui" */,
+				9FC04BC02B823EBC00F9E489 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				9FC04BC32B82401A00F9E489 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 			);
 			productRefGroup = 9FDC65AC2B6C036C0095101C /* Products */;
 			projectDirPath = "";
@@ -640,6 +648,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		9FC04BC02B823EBC00F9E489 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.8.1;
+			};
+		};
+		9FC04BC32B82401A00F9E489 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
 		9FEA86842B790ADA00622C74 /* XCRemoteSwiftPackageReference "bottombar-swiftui" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/smartvipere75/bottombar-swiftui";
@@ -651,6 +675,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		9FC04BC12B823EBD00F9E489 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9FC04BC02B823EBC00F9E489 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		9FC04BC42B82401A00F9E489 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9FC04BC32B82401A00F9E489 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
 		9FEA86852B790ADA00622C74 /* BottomBar-SwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 9FEA86842B790ADA00622C74 /* XCRemoteSwiftPackageReference "bottombar-swiftui" */;
