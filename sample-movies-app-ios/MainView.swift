@@ -40,7 +40,7 @@ struct MainView: View {
                     TabView(selection: $selectedIndex) {
                                 MoviesScreen()
                                 .tag(0)
-                                Text("Search")
+                                SearchScreen()
                                 .tag(1)
                                 Text("Favourites")
                                 .tag(2)

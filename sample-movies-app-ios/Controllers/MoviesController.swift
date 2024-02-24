@@ -9,7 +9,7 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-class MoviesController : ObservableObject {
+class MoviesViewModel : ObservableObject {
      
     @Published var results: [MovieModel] = []
 
@@ -27,31 +27,14 @@ class MoviesController : ObservableObject {
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
-                print("JSON: \(json)")
-               
+    
+        
+             
             case .failure(let error):
                 print(error)
             }
         }
         print(response)
         
-        URLSession.shared.dataTask(with: url) { (data, response, error) in
-            guard let data = data, error == nil else {
-                print("Error: \(error?.localizedDescription ?? "Unknown error")")
-                completion(nil)
-                return
-            }
-            
-            do {
-                let movies = try JSONDecoder().decode([MovieModel].self, from: data)
-                DispatchQueue.main.async {
-                    completion(movies)
-                }
-            } catch {
-                print("Error decoding JSON: \(error.localizedDescription)")
-                completion(nil)
-            }
-        }
-        .resume()
     }
 }
