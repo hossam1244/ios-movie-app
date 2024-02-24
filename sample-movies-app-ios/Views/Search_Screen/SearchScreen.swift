@@ -14,7 +14,7 @@ struct SearchScreen: View {
     var body: some View {
         NavigationStack {
             Text("Searching for \(searchText)")
-                .navigationTitle("Search for your favourite movie?")
+                .navigationTitle("Searchable Example")
         }
         .searchable(text: $searchText)
     }

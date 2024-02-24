@@ -34,7 +34,6 @@ struct MainView: View {
     
     
     var body: some View {
-        VStack {
             NavigationView {
                 VStack {
                     TabView(selection: $selectedIndex) {
@@ -48,7 +47,6 @@ struct MainView: View {
                     BottomBar(selectedIndex: $selectedIndex, items: items)
                 }
             }
-        }.background(Color.white)
         
         
     }

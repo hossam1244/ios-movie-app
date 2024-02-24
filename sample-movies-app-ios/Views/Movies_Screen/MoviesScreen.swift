@@ -14,22 +14,16 @@ struct MoviesScreen: View {
 
 
     var body: some View {
-        VStack{
-            VStack{
-                ForEach(results, id: \.Title) { result in
-                    MovieItemView(movieModel: result)
+        NavigationStack {
+            ScrollView {
+                LazyVStack(spacing: 10) {
+                    ForEach (0 ... 10, id: \.self) { listing in
+                       MovieItemView()
+                    
+                    }
                 }
             }
-            
-        }.onAppear()  {
-            Task {
-                await MoviesViewModel().getMovies { (results) in
-                    self.results = results ?? []
-                }
-            }
-           
-        }
-        
+        }.padding()
     }
   
 }
