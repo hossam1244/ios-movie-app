@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F58CE022B8B5F5500361B4D /* SearchAndFilterBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F58CE012B8B5F5500361B4D /* SearchAndFilterBar.swift */; };
 		9F622C012B89EF0900BBD69D /* SearchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F622C002B89EF0900BBD69D /* SearchScreen.swift */; };
 		9F93ABF12B8107E1005A0741 /* MoviesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F93ABF02B8107E1005A0741 /* MoviesController.swift */; };
 		9FC04BC22B823EBD00F9E489 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 9FC04BC12B823EBD00F9E489 /* Alamofire */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9F58CE012B8B5F5500361B4D /* SearchAndFilterBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAndFilterBar.swift; sourceTree = "<group>"; };
 		9F622C002B89EF0900BBD69D /* SearchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreen.swift; sourceTree = "<group>"; };
 		9F93ABF02B8107E1005A0741 /* MoviesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesController.swift; sourceTree = "<group>"; };
 		9FDC65AB2B6C036C0095101C /* sample-movies-app-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sample-movies-app-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -159,6 +161,7 @@
 			children = (
 				9FEA867A2B77F8A500622C74 /* MoviesScreen.swift */,
 				9FEA86822B78EA2900622C74 /* MovieItemView.swift */,
+				9F58CE012B8B5F5500361B4D /* SearchAndFilterBar.swift */,
 			);
 			path = Movies_Screen;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 				9FDC65AF2B6C036C0095101C /* SampleMoviesApp.swift in Sources */,
 				9FEA86832B78EA2900622C74 /* MovieItemView.swift in Sources */,
 				9FEA867B2B77F8A500622C74 /* MoviesScreen.swift in Sources */,
+				9F58CE022B8B5F5500361B4D /* SearchAndFilterBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
