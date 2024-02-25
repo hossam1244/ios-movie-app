@@ -12,27 +12,40 @@ struct MovieItemView : View {
     
 //    var movieModel : MovieModel
     
+    var images = [
+       "morty",
+       "morty",
+       "morty"
+    ]
+    
     var body: some View {
         VStack(spacing: 0) {
-            Rectangle()
-                .frame(height: 300)
-                .clipShape(RoundedRectangle(cornerRadius: 10))
-        }
-        
-        HStack(alignment: .top) {
-            VStack(alignment: .leading) {
-                Text("Movie Name")
-                Text("Movie Genre")
-    
+            TabView {
+                ForEach(images, id: \.self) { image in
+                    Image(image).resizable().scaledToFill()
+                    
+                }
             }
-            Spacer()
-            HStack(spacing: 2) {
-                Image(systemName: "star.fill")
-                Text("3.44")
-            }
+            .frame(height: 300)
+            .clipShape(RoundedRectangle(cornerRadius: 10))
+            .tabViewStyle(.page)
             
-           
-        }.padding()
+            
+            HStack(alignment: .top) {
+                VStack(alignment: .leading) {
+                    Text("Movie Name")
+                    Text("Movie Genre")
+                    
+                }
+                Spacer()
+                HStack(spacing: 2) {
+                    Image(systemName: "star.fill")
+                    Text("3.44")
+                }
+                
+                
+            }.padding()
+        }
         
 //        ZStack {
 //            RoundedRectangle(cornerRadius: 25, style: .continuous)
