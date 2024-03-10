@@ -41,8 +41,11 @@ struct MovieItemView : View {
                     Text("Movie Genre")
                         .font(.title2)
                         .fontWeight(.light)
-                        .foregroundStyle(.gray)
+                        .foregroundStyle(
+                            Color(UIColor.gray)
+                        )
                         .lineLimit(1)
+                    
                     
                 }
                 Spacer()
