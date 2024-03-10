@@ -35,6 +35,7 @@ struct MovieItemView : View {
                 VStack(alignment: .leading) {
                     Text("Movie Name")
                         .font(.system(size: 24, weight: .medium))
+                        .baselineOffset(5)
                         .multilineTextAlignment(.leading)
                         .lineLimit(1)
                     Text("Movie Genre")
