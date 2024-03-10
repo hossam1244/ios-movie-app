@@ -33,7 +33,7 @@ struct MovieItemView : View {
             
             HStack(alignment: .top) {
                 VStack(alignment: .leading) {
-                    Text("Movie Name")
+                    Text("Movie Name".uppercased())
                         .font(.system(size: 24, weight: .medium))
                         .baselineOffset(5)
                         .multilineTextAlignment(.leading)
