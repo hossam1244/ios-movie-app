@@ -34,7 +34,9 @@ struct MovieItemView : View {
             HStack(alignment: .top) {
                 VStack(alignment: .leading) {
                     Text("Movie Name")
+                        .font(.title)
                     Text("Movie Genre")
+                        .font(.title2)
                     
                 }
                 Spacer()
