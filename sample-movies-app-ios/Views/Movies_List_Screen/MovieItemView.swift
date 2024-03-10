@@ -49,15 +49,18 @@ struct MovieItemView : View {
                     
                 }
                 Spacer()
-                HStack(spacing: 2) {
-                    Image(systemName: "star.fill")
-                    Text("3.44")
+                VStack {
+                    HStack(spacing: 2) {
+                        Image(systemName: "star.fill")
+                        Text("3.44")
+                    }
+                    Spacer()
+                    Image(systemName: "heart").frame(alignment: .trailing)
                 }
-                
-                
+               
             }.padding()
         }
-        
+
 //        ZStack {
 //            RoundedRectangle(cornerRadius: 25, style: .continuous)
 //                       .fill(.white)
