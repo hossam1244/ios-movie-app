@@ -34,11 +34,13 @@ struct MovieItemView : View {
             HStack(alignment: .top) {
                 VStack(alignment: .leading) {
                     Text("Movie Name")
-                        .font(.title)
-                        .fontWeight(.bold)
+                        .font(.system(size: 24, weight: .medium))
+                        .multilineTextAlignment(.leading)
+                        .lineLimit(1)
                     Text("Movie Genre")
                         .font(.title2)
-                        .fontWeight(.medium)
+                        .fontWeight(.light)
+                        .lineLimit(1)
                     
                 }
                 Spacer()
