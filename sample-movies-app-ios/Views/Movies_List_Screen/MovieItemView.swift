@@ -35,8 +35,10 @@ struct MovieItemView : View {
                 VStack(alignment: .leading) {
                     Text("Movie Name")
                         .font(.title)
+                        .fontWeight(.bold)
                     Text("Movie Genre")
                         .font(.title2)
+                        .fontWeight(.medium)
                     
                 }
                 Spacer()
