@@ -11,7 +11,6 @@ struct SearchAndFilterBar: View {
     var body: some View {
         HStack {
             Image(systemName: "magnifyingglass")
-            
             VStack(alignment: .leading, spacing: 2) {
                 Text("Your favourite show?")
                     .font(.footnote)

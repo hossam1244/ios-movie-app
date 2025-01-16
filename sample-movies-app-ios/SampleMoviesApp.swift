@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 @main
 struct sample_movies_app_iosApp: App {
     var body: some Scene {
